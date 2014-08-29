@@ -1,6 +1,11 @@
 Change log
 ==========
 
+Version 0.1.4-rebuiltbits
+-------------
+
+* Adds `email` field to `paypal.pro.models.PayPalNVP`
+
 Version 0.1.3
 -------------
 
