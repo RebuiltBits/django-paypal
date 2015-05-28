@@ -9,6 +9,13 @@ detailed information about all changes.
 
 Below is a summary:
 
+<<<<<<< HEAD
+Version 0.2.6-rebuiltbits
+-------------
+
+* Added ``email`` field to ``paypal.pro.models.PayPalNVP``,
+
+
 Version 0.2.5
 -------------
 
@@ -31,6 +38,12 @@ Version 0.2.4
 * Work-arounds for bugs in the IPN Simulator
 * Other small fixes
 
+=======
+Version 0.1.4-rebuiltbits
+-------------
+
+* Added `email` field to `paypal.pro.models.PayPalNVP`
+>>>>>>> Adds an 'email' field to PayPalNVP.
 
 Version 0.2.3
 -------------

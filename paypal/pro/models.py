@@ -43,6 +43,7 @@ class PayPalNVP(Model):
                      "state",
                      "countrycode",
                      "zip",
+                     "email",
                      ]
 
     # Response fields
@@ -64,6 +65,7 @@ class PayPalNVP(Model):
     state = models.CharField("State", max_length=255, blank=True)
     countrycode = models.CharField("Country", max_length=2, blank=True)
     zip = models.CharField("Postal / Zip Code", max_length=32, blank=True)
+    email = models.EmailField(blank=True)
 
     # Custom fields
     invnum = models.CharField(max_length=255, blank=True)
@@ -107,7 +109,7 @@ class PayPalNVP(Model):
         self.query = urlencode(query_data)
         self.response = urlencode(paypal_response)
 
-        # Was there a flag on the play?        
+        # Was there a flag on the play?
         ack = paypal_response.get('ack', False)
         if ack != "Success":
             if ack == "SuccessWithWarning":
@@ -128,7 +130,7 @@ class PayPalNVP(Model):
 
         wpp = PayPalWPP(request)
 
-        # Change the model information into a dict that PayPal can understand.        
+        # Change the model information into a dict that PayPal can understand.
         params = model_to_dict(self, exclude=self.ADMIN_FIELDS)
         params['acct'] = self.acct
         params['creditcardtype'] = self.creditcardtype
