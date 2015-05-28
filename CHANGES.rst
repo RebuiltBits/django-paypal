@@ -9,8 +9,14 @@ detailed information about all changes.
 
 Below is a summary:
 
+Version 0.1.4-rebuiltbits
+-------------
+
+* Added `email` field to `paypal.pro.models.PayPalNVP`
+
 Version 0.2.3
 -------------
+
 * Fixed various deprecation warnings when running under Django 1.8
 
 
