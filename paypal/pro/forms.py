@@ -41,8 +41,8 @@ class PaymentForm(forms.Form):
             else:
                 nvp_obj = wpp.createRecurringPaymentsProfile(params, direct=True)
         except PayPalFailure:
-            return False
-        return True
+            return False, None
+        return True, nvp_obj
 
 
 class ConfirmForm(forms.Form):
